@@ -1,0 +1,21 @@
+# Environment variables & secrets
+.env
+.env.*
+secrets.json
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
