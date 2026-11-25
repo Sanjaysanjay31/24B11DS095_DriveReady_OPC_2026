@@ -124,8 +124,8 @@ Agentic_AI_Workshop/
 ### Setup Instructions
 1. Clone this repository:
    ```bash
-   git clone https://github.com/<your-username>/Agentic_AI_Workshop.git
-   cd Agentic_AI_Workshop
+   git clone https://github.com/Sanjaysanjay31/24B11DS095_DriveReady_OPC_2026.git
+   cd 24B11DS095_DriveReady_OPC_2026
    ```
 2. Set up environment variables:
    ```bash
