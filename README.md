@@ -107,7 +107,9 @@ Agentic_AI_Workshop/
 ├── Day_1/                             # Day 1: LLM Fundamentals & Resilient API Setup
 │   ├── LLM_Setup.ipynb                # Production notebook with dual-provider failover
 │   └── README.md                      # Detailed Day 1 technical documentation
-└── Day_2/                             # Upcoming: Structured Prompting & Pydantic Schemas
+├── Day_2/                             # Day 2: Prompts, Memory & Python Agent Fundamentals
+│   ├── Startup_Marketing_Assistant.ipynb  # Interactive marketing assistant notebook
+│   └── README.md                      # Day 2 curriculum and technical documentation
 ```
 
 ---
