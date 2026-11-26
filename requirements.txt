@@ -1,0 +1,14 @@
+# Core LLM & Agent Frameworks
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-groq>=0.2.0
+langchain-openrouter>=0.1.0
+openai>=1.50.0
+
+# Environment & Data Validation
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+
+# Interactive Notebook Environment
+jupyter>=1.0.0
+ipykernel>=6.0.0

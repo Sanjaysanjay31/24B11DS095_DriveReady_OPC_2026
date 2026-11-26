@@ -68,22 +68,13 @@ The **AI Startup Marketing Agent** is an autonomous, multi-agent engine designed
 
 ---
 
-## 📅 12-Day Workshop Schedule & Implementation Plan
+## 📅 Completed Workshop Milestones (Days 1–3)
 
 | Day | Date | Mode | Topic | Project Milestone & Deliverable |
 |:---:|:---:|:---:|:---|:---|
 | **Day 1** | Mon, 23 Nov 2026 | Online | **How LLMs work and your first API call** | **Resilient Multi-Provider Fallback**: Dual-provider LangChain integration (OpenRouter + Groq) and Llama Prompt Guard safety layer. |
-| **Day 2** | Tue, 24 Nov 2026 | Online | **Prompts that work, JSON and Python basics** | **Startup Profiler & Schema**: Structured Pydantic extraction of product USP, audience, and problem statements into JSON. |
-| **Day 3** | Wed, 25 Nov 2026 | Online | **Your first AI agent** | **Hook & Scriptwriting Agent**: Autonomous agent capable of creating problem-first viral video hooks and timed 9:16 scripts. |
-| **Day 4** | Thu, 26 Nov 2026 | Online | **Tools, Pydantic and Google Sheets** | **Research Tools & Content Tracker**: Live web search tools for market stats and Google Sheets logging for video concepts. |
-| **Day 5** | Fri, 27 Nov 2026 | Online | **Memory and RAG** | **Brand Knowledge Base**: Vector storage of startup pitch decks and competitor case studies for persistent context. |
-| **Day 6** | Sat, 28 Nov 2026 | Online | **Workflows with LangGraph** | **Orchestrated Production Graph**: Stateful multi-node workflow linking Profiler $\rightarrow$ Researcher $\rightarrow$ Scriptwriter. |
-| **Day 7** | Mon, 30 Nov 2026 | Offline | **Hand-offs and owner approval** | **Human-in-the-Loop Gate**: Interactive founder review portal (Streamlit/CLI) to edit scripts and approve storyboard frames. |
-| **Day 8** | Tue, 01 Dec 2026 | Offline | **An AI workforce with a supervisor** | **Supervised Multi-Agent Team**: Supervisor agent managing dedicated Creative, Research, Visual, and QA subagents. |
-| **Day 9** | Wed, 02 Dec 2026 | Offline | **Capstone: Telegram, Google Sheets and Gmail** | **Notification & Export Pipeline**: Real-time Telegram alerts on script approval, automated Google Sheet updates, and email drafts. |
-| **Day 10** | Thu, 03 Dec 2026 | Offline | **Reliable, safe and affordable agents** | **Guardrails & Cost Optimization**: Token budget controls, caching, rate-limit handlers, and safety checks on generated media. |
-| **Day 11** | Fri, 04 Dec 2026 | Offline | **Test it, prove it, show it** | **Automated Video Stitching**: TTS voice generation, subtitle alignment (Whisper), and FFmpeg/MoviePy compilation. |
-| **Day 12** | Sat, 05 Dec 2026 | Offline | **Demo Day** | **Live Capstone Showcase**: Complete autonomous run generating a published YouTube Short/Reel from a raw URL. |
+| **Day 2** | Tue, 24 Nov 2026 | Online | **Prompts that work, JSON and Python basics** | **Startup Marketing Agent**: Structured system prompt, few-shot classification, JSON brief extraction, and sliding-window memory. |
+| **Day 3** | Wed, 25 Nov 2026 | Online | **Your first AI agent** | **First LangChain Agent**: LCEL chain with memory, automated test suite (`tests.csv`), and task classification (Code vs LLM vs Agent). |
 
 ---
 
@@ -104,12 +95,16 @@ The **AI Startup Marketing Agent** is an autonomous, multi-agent engine designed
 ```
 Agentic_AI_Workshop/
 ├── README.md                          # Master workshop repository documentation
+├── .env.example                       # Environment variables template
 ├── Day_1/                             # Day 1: LLM Fundamentals & Resilient API Setup
 │   ├── LLM_Setup.ipynb                # Production notebook with dual-provider failover
-│   └── README.md                      # Detailed Day 1 technical documentation
+│   └── README.md                      # Day 1 technical documentation
 ├── Day_2/                             # Day 2: Prompts, Memory & Python Agent Fundamentals
-│   ├── Startup_Marketing_Assistant.ipynb  # Interactive marketing assistant notebook
+│   ├── Startup_Marketing_Agent.ipynb  # Interactive marketing agent notebook
 │   └── README.md                      # Day 2 curriculum and technical documentation
+└── Day_3/                             # Day 3: First Agent, LangChain & Evaluation
+    ├── Startup_Marketing_Agent.ipynb  # LangChain LCEL chain with memory & test suite
+    └── README.md                      # Day 3 documentation and eval guide
 ```
 
 ---
