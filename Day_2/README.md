@@ -1,14 +1,53 @@
 # Day 2 — Prompts, Memory, and Python Fundamentals for Agents
 
+**Workshop:** One Person Company — 12-Day Agentic AI Workshop  
+**Institution:** Department of Technical Training, Aditya University  
 **Project:** AI Startup Marketing Agent  
+**Primary Provider:** OpenRouter — NVIDIA Nemotron 3.5 Super VL (Free)  
+**Fallback Provider:** Groq — GPT-OSS 120B  
+**Notebook:** [`Startup_Marketing_Assistant.ipynb`](file:///c:/Skills/Agentic_AI_Workshop/Day_2/Startup_Marketing_Assistant.ipynb)  
+**Environment:** Dual-Mode (Google Colab & Local Python with `.env`)  
 
 ---
 
 ## 📌 Overview
 
-Day 1 focused on connecting to LLM providers with resilient fallback logic. Day 2 shifts focus to controlling model behavior, enabling conversational memory, and implementing the core Python primitives that every autonomous agent relies on.
+Day 1 established multi-provider LLM connectivity and failover. Day 2 shifts focus to controlling model behavior, enabling conversational memory, and implementing the core Python primitives that every autonomous agent relies on.
 
 By applying these concepts to the **AI Startup Marketing Agent**, we build an intelligent assistant that understands founder marketing requests, extracts structured startup data, calculates campaign budgets, and maintains context across multi-turn conversations.
+
+---
+
+## 🏗️ Architecture: Dual-Provider + Dual-Environment
+
+```
+                ┌──────────────────────────────────────┐
+                │          Environment Setup           │
+                │  Local: .env via python-dotenv       │
+                │  Colab: google.colab.userdata        │
+                └──────────────────┬───────────────────┘
+                                   │
+                                   ▼
+                ┌──────────────────────────────────────┐
+                │        ask_llm(messages)             │
+                │                                      │
+                │  1. Primary: OpenRouter              │
+                │     (NVIDIA Nemotron 3.5 Super VL)   │
+                │                 │                    │
+                │         (Fail / Timeout)             │
+                │                 ▼                    │
+                │  2. Fallback: Groq (GPT-OSS 120B)    │
+                └──────────────────┬───────────────────┘
+                                   │
+                                   ▼
+                ┌──────────────────────────────────────┐
+                │    Startup Marketing Assistant UI    │
+                │    - Intent Classifier (Few-shot)    │
+                │    - JSON Brief Extractor            │
+                │    - Cost Calculator with Decorator  │
+                │    - Rolling Memory Buffer (5 turns) │
+                └──────────────────────────────────────┘
+```
 
 ---
 
@@ -63,3 +102,54 @@ Maintains conversational continuity across multiple turns without inflating toke
 - **Exception Handling**: Catching `RateLimitError`, `AuthenticationError`, and `APIConnectionError` to prevent runtime halts.
 
 ---
+
+## 📊 Notebook Structure
+
+| Cell | Type | Description |
+|:---:|:---:|:---|
+| **0** | Markdown | Colab badge and Day 2 curriculum overview |
+| **1** | Code | Install dependencies (`openai`, `python-dotenv`) |
+| **2** | Code | Dual client setup (OpenRouter primary, Groq fallback) with `.env` and Colab Secrets loading |
+| **3** | Code | Marketing service catalogue and pricing dictionary |
+| **4** | Code | System prompt (Role, Facts, Rules, Format) |
+| **5** | Code | Resilient LLM invocation helper function (`ask_llm`) with automatic failover |
+| **6** | Code | Single-turn marketing chat helper (`marketing_chat`) |
+| **7** | Code | Verification query for service catalogue compliance |
+| **8** | Code | Few-shot marketing request classifier (`classify_marketing_request`) |
+| **9** | Code | Unstructured brief extraction into JSON (`extract_startup_details`) |
+| **10** | Code | Campaign cost calculation with `ValueError` guards |
+| **11** | Code | Execution logging decorator (`@log_execution`) |
+| **12** | Code | Robust exception handling wrapper (`safe_marketing_chat`) |
+| **13** | Code | Sliding window conversation memory (`marketing_chat_with_memory`) |
+| **14** | Code | Automated 6-turn dialogue test verifying contextual memory retention |
+| **15** | Code | Interactive command-line chat session |
+
+---
+
+## 🚀 How to Run
+
+### Option A: Local Execution (VS Code / Jupyter)
+1. Copy `.env.example` to `.env` in the root folder:
+   ```bash
+   cp .env.example .env
+   ```
+2. Open `.env` and paste your API keys:
+   ```env
+   OPENROUTER_API_KEY=your_openrouter_api_key
+   GROQ_API_KEY=your_groq_api_key
+   ```
+3. Install dependencies:
+   ```bash
+   pip install openai python-dotenv
+   ```
+4. Run the notebook:
+   ```bash
+   jupyter notebook Day_2/Startup_Marketing_Assistant.ipynb
+   ```
+
+### Option B: Google Colab
+1. Click the **Open In Colab** badge at the top of [`Startup_Marketing_Assistant.ipynb`](file:///c:/Skills/Agentic_AI_Workshop/Day_2/Startup_Marketing_Assistant.ipynb).
+2. In Colab's left sidebar, click **Secrets (key icon)** and add:
+   - `OPENROUTER_API_KEY`: Your OpenRouter API key.
+   - `GROQ_API_KEY`: Your Groq API key.
+3. Run all cells (`Runtime -> Run all`).

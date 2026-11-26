@@ -129,9 +129,18 @@ Agentic_AI_Workshop/
    git clone https://github.com/Sanjaysanjay31/24B11DS095_DriveReady_OPC_2026.git
    cd 24B11DS095_DriveReady_OPC_2026
    ```
-2. Set up environment variables:
+2. Set up environment variables (for local execution):
+   Copy `.env.example` to `.env` and add your keys:
+   ```bash
+   cp .env.example .env
+   ```
+   Or export them directly:
    ```bash
    export OPENROUTER_API_KEY="your-openrouter-key"
    export GROQ_API_KEY="your-groq-key"
    ```
-3. Open [`Day_1/LLM_Setup.ipynb`](file:///c:/Skills/Agentic_AI_Workshop/Day_1/LLM_Setup.ipynb) and run all cells.
+3. For Google Colab:
+   Add `OPENROUTER_API_KEY` and `GROQ_API_KEY` to **Colab Secrets (key icon)** in the left sidebar.
+4. Launch the notebooks:
+   - Day 1: [`Day_1/LLM_Setup.ipynb`](file:///c:/Skills/Agentic_AI_Workshop/Day_1/LLM_Setup.ipynb)
+   - Day 2: [`Day_2/Startup_Marketing_Assistant.ipynb`](file:///c:/Skills/Agentic_AI_Workshop/Day_2/Startup_Marketing_Assistant.ipynb)
