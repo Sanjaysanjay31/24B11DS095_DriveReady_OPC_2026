@@ -3,6 +3,10 @@
 .env.*
 !.env.example
 secrets.json
+*service_account*.json
+*credentials*.json
+google_service_account.json
+campaign_orders.csv
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/

@@ -66,17 +66,7 @@ The **AI Startup Marketing Agent** is an autonomous, multi-agent engine designed
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
----
 
-## 📅 Completed Workshop Milestones (Days 1–3)
-
-| Day | Date | Mode | Topic | Project Milestone & Deliverable |
-|:---:|:---:|:---:|:---|:---|
-| **Day 1** | Mon, 23 Nov 2026 | Online | **How LLMs work and your first API call** | **Resilient Multi-Provider Fallback**: Dual-provider LangChain integration (OpenRouter + Groq) and Llama Prompt Guard safety layer. |
-| **Day 2** | Tue, 24 Nov 2026 | Online | **Prompts that work, JSON and Python basics** | **Startup Marketing Agent**: Structured system prompt, few-shot classification, JSON brief extraction, and sliding-window memory. |
-| **Day 3** | Wed, 25 Nov 2026 | Online | **Your first AI agent** | **First LangChain Agent**: LCEL chain with memory, automated test suite (`tests.csv`), and task classification (Code vs LLM vs Agent). |
-
----
 
 ## 🛠️ Technology Stack
 
@@ -85,7 +75,7 @@ The **AI Startup Marketing Agent** is an autonomous, multi-agent engine designed
   - `openai/gpt-oss-120b`: High-throughput open model hosted on Groq LPUs for zero-latency failover.
   - `meta-llama/llama-prompt-guard-2-22m`: Input security classifier for injection and jailbreak protection.
 - **Orchestration & Agents:** LangChain, LangGraph, Pydantic v2.
-- **Tools & Data:** Tavily Web Search, Google Sheets API, Telegram Bot API.
+- **Tools & Data:** Google Sheets API (`gspread`), Tavily Web Search, Telegram Bot API.
 - **Media & Assembly Pipeline:** Edge-TTS / ElevenLabs, OpenAI Whisper (word-level timestamps), FFmpeg / MoviePy.
 
 ---
@@ -94,17 +84,26 @@ The **AI Startup Marketing Agent** is an autonomous, multi-agent engine designed
 
 ```
 Agentic_AI_Workshop/
-├── README.md                          # Master workshop repository documentation
-├── .env.example                       # Environment variables template
-├── Day_1/                             # Day 1: LLM Fundamentals & Resilient API Setup
-│   ├── LLM_Setup.ipynb                # Production notebook with dual-provider failover
-│   └── README.md                      # Day 1 technical documentation
-├── Day_2/                             # Day 2: Prompts, Memory & Python Agent Fundamentals
-│   ├── Startup_Marketing_Agent.ipynb  # Interactive marketing agent notebook
-│   └── README.md                      # Day 2 curriculum and technical documentation
-└── Day_3/                             # Day 3: First Agent, LangChain & Evaluation
-    ├── Startup_Marketing_Agent.ipynb  # LangChain LCEL chain with memory & test suite
-    └── README.md                      # Day 3 documentation and eval guide
+├── README.md
+├── .env.example
+├── requirements.txt
+├── Day_1/
+│   ├── LLM_Setup.ipynb
+│   ├── Day 1 · How LLMs work and your first API call(Mentor_notes).html
+│   └── README.md
+├── Day_2/
+│   ├── Startup_Marketing_Agent.ipynb
+│   ├── Day 2 · Prompts, memory and the Python agents need(Mentor_notes).html
+│   └── README.md
+├── Day_3/
+│   ├── Startup_Marketing_Agent.ipynb
+│   ├── Day 3 · Your first agent, what an agent is, and LangChain(Mentor_notes).html
+│   ├── tests.csv
+│   └── README.md
+└── Day_4/
+    ├── Startup_Marketing_Agent.ipynb
+    ├── Day 4 · Tools, structured output and Google Sheets(Mentor_notes).html
+    └── README.md
 ```
 
 ---
@@ -136,6 +135,3 @@ Agentic_AI_Workshop/
    ```
 3. For Google Colab:
    Add `OPENROUTER_API_KEY` and `GROQ_API_KEY` to **Colab Secrets (key icon)** in the left sidebar.
-4. Launch the notebooks:
-   - Day 1: [`Day_1/LLM_Setup.ipynb`](file:///c:/Skills/Agentic_AI_Workshop/Day_1/LLM_Setup.ipynb)
-   - Day 2: [`Day_2/Startup_Marketing_Assistant.ipynb`](file:///c:/Skills/Agentic_AI_Workshop/Day_2/Startup_Marketing_Assistant.ipynb)
