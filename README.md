@@ -66,7 +66,30 @@ The **AI Startup Marketing Agent** is an autonomous, multi-agent engine designed
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
+---
 
+## 📅 Completed Workshop Milestones (Days 1–5)
+
+| Day | Topic | Project Milestone & Implementation | Mentor Lecture Notes |
+|:---:|:---|:---|:---|
+| **Day 1** | **How LLMs work and your first API call** | [`LLM_Setup.ipynb`](Day_1/LLM_Setup.ipynb)<br>Resilient dual-provider LangChain fallback (OpenRouter + Groq) and Llama Prompt Guard safety layer. | [`Day 1 (Mentor_notes).html`](Day_1/Day%201%20%C2%B7%20How%20LLMs%20work%20and%20your%20first%20API%20call(Mentor_notes).html) |
+| **Day 2** | **Prompts that work, JSON and Python basics** | [`Startup_Marketing_Agent.ipynb`](Day_2/Startup_Marketing_Agent.ipynb)<br>Structured system prompts, few-shot video classification, JSON brief parsing, and sliding-window memory. | [`Day 2 (Mentor_notes).html`](Day_2/Day%202%20%C2%B7%20Prompts%2C%20memory%20and%20the%20Python%20agents%20need(Mentor_notes).html) |
+| **Day 3** | **Your first AI agent** | [`Startup_Marketing_Agent.ipynb`](Day_3/Startup_Marketing_Agent.ipynb)<br>First LangChain LCEL agent with conversational memory, evaluation suite (`tests.csv`), and task routing. | [`Day 3 (Mentor_notes).html`](Day_3/Day%203%20%C2%B7%20Your%20first%20agent%2C%20what%20an%20agent%20is%2C%20and%20LangChain(Mentor_notes).html) |
+| **Day 4** | **Tools, structured output and Google Sheets** | [`Startup_Marketing_Agent.ipynb`](Day_4/Startup_Marketing_Agent.ipynb)<br>Autonomous agent with Pydantic schemas, pricing/hours tools, and live Google Sheets database logging (`gspread`). | [`Day 4 (Mentor_notes).html`](Day_4/Day%204%20%C2%B7%20Tools%2C%20structured%20output%20and%20Google%20Sheets(Mentor_notes).html) |
+| **Day 5** | **Memory and RAG: an agent that remembers and looks things up** | [`Startup_Marketing_Agent.ipynb`](Day_5/Startup_Marketing_Agent.ipynb)<br>Single-agent sign-off with LangGraph checkpointer memory across sessions and ChromaDB RAG vector retrieval. | [`Day 5 (Mentor_notes).html`](Day_5/Day%205%20%C2%B7%20Memory%20and%20RAG%2C%20an%20agent%20that%20remembers%20and%20looks%20things%20up(Mentor_notes).html)<br>[`RAG Working (Mentor_notes).html`](Day_5/RAG%20Working(Mentor_notes).html) |
+
+---
+
+## 📚 Mentor Lecture Notes & Reference Material
+
+Each day's folder preserves the instructor's original session curriculum and lecture notes in interactive HTML format:
+- **Day 1 Notes:** [`Day 1 · How LLMs work and your first API call(Mentor_notes).html`](file:///c:/Skills/Agentic_AI_Workshop/Day_1/Day%201%20%C2%B7%20How%20LLMs%20work%20and%20your%20first%20API%20call(Mentor_notes).html) — Fundamentals of tokens, temperature, system prompts, API wrappers, and pricing.
+- **Day 2 Notes:** [`Day 2 · Prompts, memory and the Python agents need(Mentor_notes).html`](file:///c:/Skills/Agentic_AI_Workshop/Day_2/Day%202%20%C2%B7%20Prompts%2C%20memory%20and%20the%20Python%20agents%20need(Mentor_notes).html) — Structured prompting, few-shot reasoning, JSON schema extraction, and conversation history.
+- **Day 3 Notes:** [`Day 3 · Your first agent, what an agent is, and LangChain(Mentor_notes).html`](file:///c:/Skills/Agentic_AI_Workshop/Day_3/Day%203%20%C2%B7%20Your%20first%20agent%2C%20what%20an%20agent%20is%2C%20and%20LangChain(Mentor_notes).html) — Agent concept, Code vs LLM vs Agent taxonomy, LangChain LCEL chains, and test evaluation.
+- **Day 4 Notes:** [`Day 4 · Tools, structured output and Google Sheets(Mentor_notes).html`](file:///c:/Skills/Agentic_AI_Workshop/Day_4/Day%204%20%C2%B7%20Tools%2C%20structured%20output%20and%20Google%20Sheets(Mentor_notes).html) — Autonomous agent tools (`@tool`), Pydantic validation, and live database persistence with Google Sheets.
+- **Day 5 Notes:** [`Day 5 · Memory and RAG, an agent that remembers and looks things up(Mentor_notes).html`](file:///c:/Skills/Agentic_AI_Workshop/Day_5/Day%205%20%C2%B7%20Memory%20and%20RAG%2C%20an%20agent%20that%20remembers%20and%20looks%20things%20up(Mentor_notes).html) & [`RAG Working(Mentor_notes).html`](file:///c:/Skills/Agentic_AI_Workshop/Day_5/RAG%20Working(Mentor_notes).html) — Multi-session conversational memory (`InMemorySaver`), vector databases (ChromaDB / FAISS), chunking, and RAG semantic search.
+
+---
 
 ## 🛠️ Technology Stack
 
@@ -100,9 +123,15 @@ Agentic_AI_Workshop/
 │   ├── Day 3 · Your first agent, what an agent is, and LangChain(Mentor_notes).html
 │   ├── tests.csv
 │   └── README.md
-└── Day_4/
+├── Day_4/
+│   ├── Startup_Marketing_Agent.ipynb
+│   ├── Day 4 · Tools, structured output and Google Sheets(Mentor_notes).html
+│   └── README.md
+└── Day_5/
     ├── Startup_Marketing_Agent.ipynb
-    ├── Day 4 · Tools, structured output and Google Sheets(Mentor_notes).html
+    ├── Day 5 · Memory and RAG, an agent that remembers and looks things up(Mentor_notes).html
+    ├── RAG Working(Mentor_notes).html
+    ├── tests.csv
     └── README.md
 ```
 
